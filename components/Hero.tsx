@@ -22,7 +22,7 @@ const tagClass =
 export default function Hero(){
   
   return (
-    <section className={`${JosefinSans.className} min-h-screen bg-[#0f0f0f] text-white flex flex-col justify-between px-6 py-6`}>
+    <section className={`${JosefinSans.className} min-h-screen text-white flex flex-col justify-between px-6 py-6`}>
 
       {/* Top Bar */}
       <div className="flex items-center gap-2">
@@ -57,9 +57,9 @@ export default function Hero(){
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
-          className={` ${acme_font.className} text-[90px] md:text-[120px] font-extrabold leading-none mt-4`}
+          className={` ${acme_font.className} text-5xl sm:text-7xl md:text-[120px] font-extrabold leading-none mt-4`}
         >
-          I,m Viraj Sawant
+          I'm Viraj Sawant
         </motion.h1>
 
         {/* Description */}

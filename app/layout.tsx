@@ -1,9 +1,8 @@
+import TechBackground from "@/components/TechBackground";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Josefin_Sans,Bungee } from "next/font/google";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,12 +13,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const JosefinSans = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
-
 
 export const metadata: Metadata = {
   title: {
@@ -43,20 +36,20 @@ export const metadata: Metadata = {
     "Software Engineer",
     "Portfolio",
     "Gen AI developer",
-    "Generative AI"
+    "Generative AI",
   ],
 
   authors: [{ name: "Viraj Sawant" }],
   creator: "Viraj Sawant",
   publisher: "Viraj Sawant",
 
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://virajsawant.vercel.app"),
 
   openGraph: {
     title: "Viraj Sawant | Full Stack Developer",
     description:
       "Explore the portfolio of Viraj Sawant showcasing web development projects, technical skills, and professional experience.",
-    url: "https://your-domain.com",
+    url: "https://virajsawant.vercel.app",
     siteName: "Viraj Sawant Portfolio",
     images: [
       {
@@ -84,7 +77,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://your-domain.com",
+    canonical: "https://virajsawant.vercel.app",
   },
 
   category: "technology",
@@ -98,15 +91,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased bg-[#0f0f0f]`}
     >
-      <body className="bg-[#0f0f0f] text-white min-h-screen">
-        <main className="pb-10 bg-[#0f0f0f]">
-          {children}
-        </main>
-      <Navbar />
-
-    </body>
+      <body className="text-white min-h-screen">
+        <TechBackground />
+        <main className="pb-24">{children}</main>
+        <Navbar />
+      </body>
     </html>
   );
 }

@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Acme } from "next/font/google";
+
 import {
   Mail,
   Phone,
@@ -9,9 +11,15 @@ import {
   Send,
 } from 'lucide-react'
 
+const acme_font = Acme({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+
 function Contact() {
   return (
-    <section className="min-h-screen bg-black text-white py-20 px-6">
+    <section className="min-h-screen text-white py-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.div
@@ -20,9 +28,16 @@ function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-4">
+      <div className="w-full flex flex-col items-center justify-center">
+          <h2
+            className={` ${acme_font.className} text-4xl md:text-6xl font-bold text-center md:text-left`}
+          >
             Get In Touch
-          </h1>
+          </h2>
+          {/* Underline */}
+          <div className="w-full max-w-5xl h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent my-4 mx-auto"></div>
+      </div>
+
 
           <p className="text-gray-400 max-w-2xl mx-auto">
             Have a project in mind, want to collaborate, or just say hello?
@@ -57,7 +72,7 @@ function Contact() {
     href="mailto:sawantviraj60@gmail.com?subject=Let's%20Connect"
     className="group flex items-center justify-between gap-4 bg-zinc-900 p-5 rounded-xl border border-zinc-800 hover:border-blue-500/50 hover:bg-zinc-800 transition-all duration-300"
   >
-    <div className="flex items-center gap-4">
+    <div className="flex min-w-0 items-center gap-4">
 
       <Mail
         className="text-gray-400 group-hover:text-blue-400 transition"
@@ -69,7 +84,7 @@ function Contact() {
           Email
         </p>
 
-        <p className="text-white">
+        <p className="text-white break-all">
           sawantviraj60@gmail.com
         </p>
       </div>
@@ -206,7 +221,7 @@ function Contact() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8"
+            className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 sm:p-8"
           >
             <form className="space-y-6" action="https://formspree.io/f/xnjyjnpd" method="POST">
               <div>

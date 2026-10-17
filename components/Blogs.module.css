@@ -1,0 +1,189 @@
+.section {
+  min-height: 100vh;
+  padding: 56px 24px 120px; /* bottom space clears the fixed Navbar */
+  color: #fff;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.subtitle {
+  margin: 16px 0 0;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #9ca3af;
+}
+
+/* Grid: 1 column mobile, 2 tablet, 3 desktop */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.cell {
+  display: flex;
+}
+
+/* Card */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(126, 127, 127, 0.5);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover { transform: translateY(-4px); }
+}
+
+.cover {
+  aspect-ratio: 16 / 9;
+  background: #0b1324;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cover svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 22px 22px;
+}
+
+.category {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: #60a5fa;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #9ca3af;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 3px 10px;
+  font-size: 12px;
+  color: #bfdbfe;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 999px;
+}
+
+/* Footer is pushed to the bottom so all cards line up */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+/* Stretch the link over the whole card so the entire card is clickable */
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.link:hover { color: #fff; }
+
+.link:focus-visible { outline: none; }
+
+.link:focus-visible::after {
+  outline: 2px solid #60a5fa;
+  outline-offset: -2px;
+  border-radius: 16px;
+}

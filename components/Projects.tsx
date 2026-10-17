@@ -44,7 +44,7 @@ const projects = [
 ];
 function Projects() {
   return (
-        <section className={` ${JosefinSans.className} min-h-screen bg-[#0f0f0f] text-white px-10 py-8 pb-15 flex flex-col justify-between`}>
+        <section className={` ${JosefinSans.className} min-h-screen text-white px-4 sm:px-10 py-8 pb-15 flex flex-col justify-between`}>
 
       {/* Top Bar */}
       <div className="flex justify-between items-center">

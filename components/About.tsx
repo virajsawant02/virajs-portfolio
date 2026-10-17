@@ -30,15 +30,15 @@ const experiences = [
     ],
   },
   {
-    company: "Alphinity Soft Tech Pvt Ltd",
-    role: "Intern",
-    duration: "Feb – July 2025",
-    logo: "/alphinity.png",
+    company: "RepliQ Automations Pvt. Ltd. Kolhapur",
+    role: "Part Time - Intern",
+    duration: "Sept 2025 - Jan 2026",
+    logo: "/repliq.png",
     points: [
-      "Developed responsive institute portfolio used by 500+ users.",
-      "Implemented REST APIs using Node.js and Express.js.",
-      "Integrated MongoDB and CRUD operations.",
-      "Built reusable UI components and optimized performance.",
+      "Developed frontend features for web applications.",
+      "Explored Instagram Graph API integrations.",
+      "Learned frontend-backend API communication.",
+      "Improved practical web development skills.",
     ],
   },
 ];
@@ -47,7 +47,7 @@ const education = [
   {
     degree: "B.Tech in Computer Science & Engineering",
     year: "2022 - 2026",
-    institute: "Sanjeevan Engineering & Technology Institute, Panhala, Kolhapur",
+    institute: "Sanjeevan Group of Institutions, Panhala, Kolhapur",
     logo: "/sanjeevan.png",
   },
   {
@@ -61,7 +61,7 @@ const education = [
 
 function About() {
   return (
-    <section className="min-h-screen bg-[#0f0f0f] text-white px-10 py-8 flex flex-col justify-between">
+    <section className="min-h-screen text-white px-4 sm:px-10 py-8 flex flex-col justify-between">
 
       {/* Top Bar */}
       <div className="flex justify-between pb-5 items-center">
@@ -82,7 +82,7 @@ function About() {
 
 
       {/* Main Content */}
-     <div className="container mx-auto px-6 py-16">
+     <div className="container mx-auto px-0 sm:px-6 py-10 sm:py-16">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
             {/* LEFT CONTENT */}
@@ -96,7 +96,7 @@ function About() {
                 </span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-extrabold leading-none">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold leading-none">
                 Full-stack Developer
             </h1>
 
@@ -124,7 +124,7 @@ function About() {
     </div>
 
      <section className={`${JosefinSans.className} text-white py-20`}>
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-0 sm:px-6">
 
         <div className="grid md:grid-cols-2 gap-20">
 
@@ -138,7 +138,7 @@ function About() {
               {experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="relative pl-14 pb-16"
+                  className="relative pl-10 sm:pl-14 pb-16"
                 >
                   <div className="absolute -left-8 top-0">
                     <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden border border-gray-700">
@@ -152,7 +152,7 @@ function About() {
                     </div>
                   </div>
 
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-2xl sm:text-3xl font-bold">
                     {exp.company}
                   </h3>
 
@@ -181,7 +181,7 @@ function About() {
               {education.map((edu, index) => (
                 <div
                   key={index}
-                  className="relative pl-14 pb-16"
+                  className="relative pl-10 sm:pl-14 pb-16"
                 >
                   <div className="absolute -left-8 top-0">
                     <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden border border-gray-700">
@@ -199,7 +199,7 @@ function About() {
                     {edu.year}
                   </p>
 
-                  <h3 className="text-3xl font-bold mt-1">
+                  <h3 className="text-2xl sm:text-3xl font-bold mt-1">
                     {edu.degree}
                   </h3>
 
