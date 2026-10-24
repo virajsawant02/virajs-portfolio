@@ -104,7 +104,7 @@ export default function Hero(){
             <a href="https://github.com/virajsawant02" className=" w-full flex flex-col items-center pointer-coarse">
               <img src={'/github.png'} width={40} alt="github"/>
             </a>
-            <a  href="/Viraj Sawant Resume.pdf" className=" text-[15px] pointer-coarse px-5 py-2 rounded-full pointer-coarse bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-2">Resume</a>
+            <a  href="/Viraj Sawant.Resume.pdf" className=" text-[15px] pointer-coarse px-5 py-2 rounded-full pointer-coarse bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-2">Resume</a>
              
             <a href="https://www.linkedin.com/in/viraj-sawant-2s1v5s1/" className=" w-full pointer-coarse flex flex-col items-center">
               <img src={'/linkedin.png'} width={40} alt="github"/>
